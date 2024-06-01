@@ -66,8 +66,8 @@ n = 5
 power = math.pow(100, n)
 background = pygame.display.set_mode((width, height))
 
-SquareBig = Square(50, (320, 200), power, -0.9 / 10500)
-SquareSmall = Square(20, (100, 230), 1, 0)
+SquareBig = Square(150, (200, 100), power, -0.9 / 20000)
+SquareSmall = Square(75, (100, 175), 1, 0)
 
 count = 0
 running = True
@@ -89,7 +89,7 @@ while running:
                 power = math.pow(100, n)
                 SquareBig.mass = power
 
-    for i in range(10000):
+    for i in range(1000):
         if SquareSmall.collision(SquareBig):
             count += 1
             v1 = SquareSmall.NewVelocity(SquareBig)
